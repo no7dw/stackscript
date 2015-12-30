@@ -40,13 +40,13 @@ function system_setup_iptables {
 -A INPUT -p tcp --dport 443 -j ACCEPT
 
 #  Allow ports for MONGODB
--A INPUT -p tcp --dport 27017 -j ACCEPT
+#-A INPUT -p tcp --dport 27017 -j ACCEPT
 
 #  Allow ports for nodejs
--A INPUT -p tcp --dport 3000 -j ACCEPT
+#-A INPUT -p tcp --dport 3000 -j ACCEPT
 
 #  Allow ports for livereload
--A INPUT -p tcp --dport 35729 -j ACCEPT
+#-A INPUT -p tcp --dport 35729 -j ACCEPT
 
 #  Allow SSH connections
 #  The -dport number should be the same port number you set in sshd_config
@@ -170,10 +170,10 @@ function system_setup {
 }
 
 # Get down to business
-#system_setup
-#system_set_timezone
-#system_setup_iptables
-#configure_users
-#install_git_mongo
-#install_nginx
+system_setup
+system_set_timezone
+system_setup_iptables
+configure_users
+install_git_mongo
+install_nginx
 install_node_npm
