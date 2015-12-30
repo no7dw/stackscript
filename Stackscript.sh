@@ -1,27 +1,15 @@
-linode server
-Linux deng 4.1.5-x86_64-linode61 #7 SMP Mon Aug 24 13:46:31 EDT 2015 x86_64
-
-The programs included with the Debian GNU/Linux system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
-Last login: Mon Nov 16 12:00:54 2015 from 113.119.215.252
-root@deng:~# ls
-StackScript  blog  local  node-latest-install  ownScript  package  run_blog.sh  start_hexo.sh
-root@deng:~# cat StackScript 
 #!/bin/bash
 # 
 #<UDF name="hostname" label="The hostname for the new Linode.">
-# HOSTNAME=
+HOSTNAME=Deng
 #<UDF name="fqdn" label="The new Linode's Fully Qualified Domain Name">
-# FQDN= 
+FQDN=deng.io 
 #<UDF name="USER" label="Unprivileged User Account" />
-# USER=
+USER=Wade
 #<UDF name="USER_PASSWORD" label="Unprivileged User Password" />
-# USER_PASSWORD=
+USER_PASSWORD=
 #
+
 
 set -e
 
