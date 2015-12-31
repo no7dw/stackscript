@@ -50,7 +50,7 @@ function system_setup_iptables {
 
 #  Allow SSH connections
 #  The -dport number should be the same port number you set in sshd_config
--A INPUT -p tcp -m state --state NEW --dport 22 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW --dport 2208 -j ACCEPT
 
 #  Allow ping
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
@@ -110,13 +110,13 @@ ln -s "/etc/nginx/sites-available/$FQDN" "/etc/nginx/sites-enabled/$FQDN"
 }
 
 function configure_users {
-    deluser irc #delete irc user
-    deluser games #delete games user
-    deluser news #delete nntp daemon user
-    deluser uucp #delete uucp user
-    deluser proxy #delete proxy user
-    deluser list #delete mailing list user
-    deluser gnats #delete gnats bug reporting user
+    #deluser irc #delete irc user
+    #deluser games #delete games user
+    #deluser news #delete nntp daemon user
+    #deluser uucp #delete uucp user
+    #deluser proxy #delete proxy user
+    #deluser list #delete mailing list user
+    #deluser gnats #delete gnats bug reporting user
     useradd -m -s /bin/bash $USER #add user account 
     echo "$USER:$USER_PASSWORD" | chpasswd #setpassword
     echo "$USER ALL=(ALL) ALL" >> /etc/sudoers # add user to sudoers
